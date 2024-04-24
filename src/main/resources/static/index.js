@@ -1,3 +1,8 @@
+$ (function () {
+    hentAlle();
+} )
+
+
 let billetter = []
 function regBillett(){
     $("#errorFilm").html(" ");
