@@ -2,13 +2,7 @@ $(function () {
     hentAlle();
 })
 
-function hentAlle() {
-    $.get("/hentAlle", function (billetter) {
-        formaterData(billetter);
-
-    })
-    console.log();
-}
+let billetter = [];
 
 function formaterData(billetter) {
     let ut =
@@ -30,6 +24,14 @@ function formaterData(billetter) {
     ut += "</table";
     $("#billetter").html(ut);
 
+}
+
+function hentAlle() {
+    $.get("/hentAlle", function (billetter) {
+        formaterData(billetter);
+
+    })
+    console.log();
 }
 
 function endreEiBilet(id) {

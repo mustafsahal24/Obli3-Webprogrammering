@@ -1,5 +1,3 @@
-let billetter = [];
-
 function regBillett() {
     $("#errorFilm").html(" ");
     $("#errorSeter").html(" ");
@@ -52,7 +50,7 @@ function regBillett() {
 
     $.post("/lagre", billett, function () {
         hentAlle();
-    });
 
-    window.location.href = "/";
+        window.location.href = "/";
+    });
 }
