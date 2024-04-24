@@ -20,7 +20,6 @@ public class billetterController {
     public billetter hentEiBilet(int id){
         return rep.hentEiBilet(id);
     }
-
     @GetMapping("/hentAlle")
     public List<billetter> hentAlle() {
         return rep.hentAlleBilletter();
@@ -34,7 +33,6 @@ public class billetterController {
     public void slettEiBilet(int id){
         rep.slettEiBilet(id);
     }
-
     @DeleteMapping("/slettAlle")
     public void slettAlle() {
         rep.slettAlleBilletter();

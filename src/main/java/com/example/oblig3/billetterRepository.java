@@ -31,7 +31,6 @@ public class billetterRepository {
         List<billetter> eiBilet = db.query(sql,new BeanPropertyRowMapper(billetter.class),id);
         return eiBilet.get(0);
     }
-
     public List<billetter> hentAlleBilletter(){
         String sql = "SELECT * FROM billetter ORDER BY etternavn";
         List<billetter> alleBilletter = db.query(sql, new BeanPropertyRowMapper(billetter.class));
@@ -47,4 +46,5 @@ public class billetterRepository {
         String sql = "DELETE FROM billetter";
         db.update(sql);
     }
+
 }
